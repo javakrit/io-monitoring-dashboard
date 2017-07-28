@@ -1,8 +1,6 @@
 .main {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
   flex-wrap: wrap;
   flex: 1; /* Sticky header */
 }
@@ -15,15 +13,25 @@
   padding: 10px;
 }
 
+.main__sidebar {
+  background: var(--theme);
+  color: #fff;
+  margin-top: 3px;
+  width: 100%;
+}
+
 .main__hosts-container {
-  margin: 10px;
+  margin: 20px;
   width: 100%;
 }
 
 @media screen and (min-width: 600px) {
   .main__hosts-container {
-    margin: 10px;
-    width: 30%;
+    width: 25%;
+  }
+
+  .main__sidebar {
+    width: 12%;
   }
 }
 
@@ -42,7 +50,7 @@
 }
 
 .main__host-element--warn {
-  background: #ff6c2c;
+  background: var(--color-orange);
 }
 
 .main__host-element--total {

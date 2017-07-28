@@ -1,9 +1,18 @@
 import React, { Component } from "react";
 import socketIOClient from "socket.io-client";
+import Sidebar from "../Sidebar/Sidebar";
 import IcingaServicesWithProblems from "../IcingaServicesWithProblems/IcingaServicesWithProblems";
 import IcingaAllHosts from "../IcingaAllHosts/IcingaAllHosts";
 import WhmMailQueue from "../WhmMailQueue/WhmMailQueue";
 import "./Main.css";
+
+/**
+ * The component expects the following data from the Socket.IO server
+ * icingaServicesWithProblems: array
+ * icingaHosts: array
+ * whmMailQueue: array
+ * lastUpdated: string
+ */
 
 class Main extends Component {
   constructor() {
@@ -26,6 +35,7 @@ class Main extends Component {
     const { response, loaded } = this.state;
     return loaded
       ? <div className="main">
+          <Sidebar data={response.lastUpdated} />
           <IcingaServicesWithProblems
             data={response.icingaServicesWithProblems}
           />
