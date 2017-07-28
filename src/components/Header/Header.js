@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Header.css";
+import SocketIOLogo from "./socket-io-logo.png";
 
 const Header = ({ heading, subheading }) =>
   <header className="header">
@@ -10,6 +11,7 @@ const Header = ({ heading, subheading }) =>
     <h2 className="header__h2">
       {subheading}
     </h2>
+    <img src={SocketIOLogo} alt="Socket - IO -Logo" />
   </header>;
 
 Header.propTypes = {
