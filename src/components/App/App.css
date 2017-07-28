@@ -1,0 +1,12 @@
+:root {
+  --theme: #222;
+  --h1-size-mobile: 1.5em;
+  --h2-size-mobile: 1em;
+}
+
+.app {
+  /* Sticky header */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
