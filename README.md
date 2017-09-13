@@ -1,6 +1,8 @@
 # io-monitoring-dashboard
 > Real-time dashboard for interacting with monitoring APIs
 
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
+
 ![React SocketIO dashboard](https://www.valentinog.com/img/socket-io-monitoring-dashboard.png)
 
 **io-monitoring-dashboard** is a minimal React dashboard for interacting with both Icinga2 and the WHM APIs. The application contacts the underlying [io-monitoring-proxy](https://github.com/valentinogagliardi/io-monitoring-proxy), gets the data by the means of a Socket.IO client and updates its state. Check out [Going real time with Socket.IO, Node.Js and React](https://www.valentinog.com/blog/socket-io-node-js-react/) for an introduction.
